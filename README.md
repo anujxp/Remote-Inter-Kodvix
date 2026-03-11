@@ -99,8 +99,9 @@ Each folder contains the **work completed during the internship days.**
 🎓 BCA Student – Holkar Science College, Indore
 💻 Aspiring Software Developer
 
+LinkedIn: [www.linkedin.com/in/anuj-gupta-66543a2a9](www.linkedin.com/in/anuj-gupta-66543a2a9)
+InstaGram:[]()
 ---
 
 ⭐ **If you like this repository, give it a star!**
 
-LinkedIn: [www.linkedin.com/in/anuj-gupta-66543a2a9](www.linkedin.com/in/anuj-gupta-66543a2a9)

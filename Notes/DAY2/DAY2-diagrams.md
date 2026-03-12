@@ -499,3 +499,81 @@ Why is G1 GC preferred for large applications?
 
 That will make your **internship repo look like a senior developer project.** 🚀
 
+
+```mermaid
+flowchart TD
+
+A[New Object] --> B[Eden Region]
+
+B --> C{Minor GC}
+
+C -->|Alive| D[Survivor Region]
+C -->|Dead| E[Collected]
+
+D --> F{Survive Many GC Cycles}
+
+F -->|Yes| G[Old Region]
+F -->|No| H[Back to Survivor]
+
+G --> I{Old Region GC}
+
+I --> J[Garbage First Selection]
+
+J --> K[Cleanup Regions]
+
+K --> L[Compaction]
+
+L --> M[Free Memory]
+
+style B fill:#90caf9
+style D fill:#ffe082
+style G fill:#ef9a9a
+style K fill:#a5d6a7
+```
+
+
+## ♻️ G1 Garbage Collector Region Workflow
+
+```mermaid
+flowchart LR
+
+subgraph Young_Generation
+A[Eden Region]
+B[Survivor S0]
+C[Survivor S1]
+end
+
+subgraph Old_Generation
+D[Old Region 1]
+E[Old Region 2]
+F[Old Region 3]
+end
+
+A -->|Minor GC| B
+A -->|Minor GC| C
+
+B -->|Survive GC| C
+C -->|Survive GC| B
+
+B -->|Promotion Threshold Reached| D
+C -->|Promotion Threshold Reached| D
+
+D -->|Mixed GC| E
+E -->|Mixed GC| F
+
+F -->|Garbage First Cleanup| G[Memory Reclaimed]
+
+G --> H[Heap Compaction]
+
+H --> I[Free Regions Available]
+
+style A fill:#90caf9
+style B fill:#ffe082
+style C fill:#ffe082
+style D fill:#ef9a9a
+style E fill:#ef9a9a
+style F fill:#ef9a9a
+style G fill:#a5d6a7
+style H fill:#ce93d8
+style I fill:#80cbc4
+```

@@ -1042,5 +1042,3 @@ Together, Git and GitHub are **the backbone of modern software development**.
 
 ---
 
-# 🚀 Pro Tip for Your Internship README
-

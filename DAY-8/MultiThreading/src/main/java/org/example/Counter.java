@@ -1,13 +1,17 @@
 package org.example;
 
 public class Counter {
-    private int count;
+    private volatile int count;
     public Counter(){
         this.count=0;
     }
-    public void increment(){
-        this.count++;
+    public   void  increment(){
+//        synchronized(this)
+//        {
+            this.count++;
+//        }
     }
+
 
     public int getCount() {
         return count;

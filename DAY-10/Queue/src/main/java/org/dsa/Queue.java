@@ -27,6 +27,17 @@ public class Queue {
         queue[++r] = value;
     }
 
+    int delete() {
+        if (f == -1 || f == r+1) {
+            System.out.println("Queue is empty");
+            return 0;
+        }
+
+        int y = queue[f];
+        f++;
+        return y;
+    }
+
 
     void display() {
         if ((f == -1) || (f == r + 1)) {

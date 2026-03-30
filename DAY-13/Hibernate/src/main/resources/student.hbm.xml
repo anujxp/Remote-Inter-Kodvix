@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.hibernate.entities.Student" table="student_xml_table">
+        <id name="id" column="st_id">
+            <generator class="native"/> </id>
+
+        <property name="name" column="st_name" type="string"/>
+        <property name="city" column="st_city" type="string"/>
+    </class>
+</hibernate-mapping>

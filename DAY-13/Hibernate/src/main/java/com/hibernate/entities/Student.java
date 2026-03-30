@@ -1,4 +1,4 @@
-package com.hibernate;
+package com.hibernate.entities;
 
 public class Student {
     private int id;

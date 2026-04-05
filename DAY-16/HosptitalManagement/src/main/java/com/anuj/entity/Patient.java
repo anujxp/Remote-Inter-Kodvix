@@ -1,10 +1,8 @@
 package com.anuj.entity;
 
-public class Patient package com.anuj.entity;
-
 import jakarta.persistence.*;
-        import lombok.*;
-        import java.time.LocalDate;
+import lombok.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "patients")
@@ -28,5 +26,4 @@ public class Patient {
     private LocalDate dateOfBirth;
 
     private String gender;
-}{
 }

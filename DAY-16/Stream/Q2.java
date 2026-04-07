@@ -59,6 +59,7 @@ public class Q2 {
         );
         List<String> list = nestedList.stream().flatMap(List::stream).filter(s -> s.toLowerCase().contains("a")).toList();
         System.out.println(list);
+        
     }
 
 }

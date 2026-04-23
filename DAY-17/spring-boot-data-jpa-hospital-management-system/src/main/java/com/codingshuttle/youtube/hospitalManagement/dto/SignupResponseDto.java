@@ -1,4 +1,13 @@
 package com.codingshuttle.youtube.hospitalManagement.dto;
 
-public class SignUpResponseDto {
+import lombok.*;
+
+@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class SignupResponseDto {
+    private Long id;
+    private String username;
 }
